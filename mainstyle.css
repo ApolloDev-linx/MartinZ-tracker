@@ -1,1 +1,55 @@
-#wrap{}
+body{
+	display:grid;
+grid-template-areas:
+"head head head"
+"main main main"
+"end end end";
+background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#mainP{
+border:dashed;
+display:grid;
+grid-area: main;
+justify-content: center;
+align-items: center;
+}
+
+header{
+display:grid;
+grid-area: head;
+justify-content: center;
+align-items: center;
+border: solid;
+}
+
+form{
+border: solid;
+display:flex;
+flex-direction: column;
+align-items: center;
+margin: 0 auto;
+padding: 10px;
+gap: 5px;
+width: 90vw;
+}
+
+#logbtn{
+display:flex;
+flex-direction: column;
+border-color: red;
+border: solid;
+width: 125px;
+margin: 20px;
+justify-content: center;
+}
+
+#final{
+display:grid;
+grid-area: end;
+margin: 10px;
+border: groove;
+justify-content: center;
+}
