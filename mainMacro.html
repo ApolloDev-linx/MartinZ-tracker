@@ -3,27 +3,34 @@
 	<head>
 	<title>Macro Tracker MartinZ</title>
 	<link rel="stylesheet" href="mainstyle.css"/>
-
+	<link rel="stylesheet" href="fontsyle.css"/>
 	</head>
-	<body>
+	<body> <!-- this is where the users name will apearr-->
 	<header class="center"> <h1> Welcome back "user"</header>
 	<main class="center" id="mainP">
 		<section id="meal" class="center"> 
 		<form method= "POST" action="/mealInput"> 
 			<label for="enterMeal">Enter meal </label>
 			</br>
+			<!-- this is where meal is stored id "enterMeal"-->
 		<input name = "enterMeal"id"enterMeal" type="text" placeholder="Enter meal">
 		</br></br>
 		<p> Enter Macros</p>
-				<label for="fats">Fats (g):</label>
+		<label for="cal"> Calories</label>
+		<!--this is where cals are stored id "cal" -->
+		<input id="cal" name="cal" type="number" required placeholder="Enter Cals here"/>
+		<label for="fats">Fats (g):</label>
+				<!--this is where fats are stored id "fats" -->
 				<input id="fats" name="fats" type="number" placeholder="Enter fats in grams" />
 					<br />
 
-				<label for="protein">Protein (g):</label>
+					<label for="protein">Protein (g):</label>
+					<!-- this is where protein is stored id "protein" -->
 				<input id="protein" name="protein" type="number" placeholder="Enter protein in grams" />
 					<br />
 
-				<label for="carbs">Carbs (g):</label>
+					<label for="carbs">Carbs (g):</label>
+					<!-- this is where carbs are stored id "carbs" -->
 				<input id="carbs" name="carbs" type="number" placeholder="Enter carbs in grams" />
 					<br />
 					<button id="logbtn" class="btn" type="submit"> Log Meal.</button>
@@ -32,6 +39,7 @@
 			<div id="final" > final output here. </div>
 		</section>
 	</main>
+	<script src="macroJs.js"></script>
 	</body>
 
 

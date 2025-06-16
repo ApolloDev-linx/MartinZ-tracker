@@ -52,4 +52,5 @@ grid-area: end;
 margin: 10px;
 border: groove;
 justify-content: center;
+height: 10vh;
 }
