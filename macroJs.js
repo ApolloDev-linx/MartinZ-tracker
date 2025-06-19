@@ -23,6 +23,18 @@ function logMeal(e) {
   .then(response => response.json())
   .then(data => {
     console.log('Received from Python:', data);
+	 const days = ['mon','tue','wed','thur','fri','sat','sun'];
+	days.forEach(day => {
+		const box = document.getElementById(day);
+		box.textContent =`
+			${data.meal};
+		Calories: ${data.dailyCalories}
+		Fats: ${data.dailyFats}
+		Protein: ${data.dailyProtein}
+		Carbs: ${data.dailyCarbs}
+		 ` ;
+	});
+
   })
   .catch(error => {
     console.error('ERROR:', error);
@@ -33,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
   let btnLog = document.getElementById('logbtn');
   btnLog.addEventListener('click',(e) => logMeal(e));
 });
+
 

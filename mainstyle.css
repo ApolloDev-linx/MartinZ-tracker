@@ -54,3 +54,12 @@ border: groove;
 justify-content: center;
 height: 10vh;
 }
+
+#week{
+display:grid;
+grid-template-rows: 2fr;
+grid-template-columns: repeat(7, minmax(120px, 1fr));
+row-gap: 0.5rem;
+
+}
+
