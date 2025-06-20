@@ -2,11 +2,11 @@
 <html>
 	<head>
 	<title>Macro Tracker MartinZ</title>
-	<link rel="stylesheet" href="mainstyle.css"/>
-	<link rel="stylesheet" href="fontsyle.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='mainstyle.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='fontstyle.css') }}">
 	</head>
 	<body> <!-- this is where the users name will apearr-->
-	<header class="center"> <h1> Welcome back "user"</header>
+		<header class="center"> <h1> Welcome back "user"</h1></header>
 	<main class="center" id="mainP">
 		<section id="meal" class="center"> 
 		<form method= "POST"> 
@@ -50,10 +50,11 @@
 			</div>
 		</section>
 	</main>
-	<script src="macroJs.js"></script>
+	<script src="{{ url_for('static', filename='macroJs.js') }}"></script>
+
 	</body>
 
 
 
 
-<html>
+</html>

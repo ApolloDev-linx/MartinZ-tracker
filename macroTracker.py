@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 app = Flask(__name__)  
 CORS(app)
@@ -27,6 +27,27 @@ def log_meal():
         "dailyCalories": round(daily_calories, 2)
             
         })
+@app.route('/login', methods=['GET'])
+def serve_login():
+    return render_template('macroLogin.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username= data['username']
+    password= data['password']
+
+    if username == "apollo" and password == "test123":
+        return jsonify({'success': True})
+    else:
+        return jsonify({'success': False})
+
+@app.route('/main')
+def main_page():
+    return render_template('mainMacro.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
